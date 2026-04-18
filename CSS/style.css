@@ -1,49 +1,63 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background: #fff;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #ffffff;
 }
 
-a{
-    text-decoration: none;
-    color: #333;
+a {
+  text-decoration: none;
+  color: #333;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
 /* Navbar */
 .navbar {
-    background: #fff;
-    padding: 20px;
+  background: #ffe365;
+  padding: 20px;
+  height: 130px;
 }
 
-.navbar .coontainer {
-    display: flex;
-    
+.navbar .container {
+  display: flex;
+}
+
+.logo img {
+  transform: scale(0.5);
+  position: relative;
+  top: -50px;
+  left: -70px;
 }
 
 /* Utility Classes */
-.container{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px;
+#everything-holder {
+  height: 800px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #6c57f5;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.container{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 15px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
