@@ -27,40 +27,40 @@ img {
 /* Navbar */
 .navbar {
   background: rgba(17, 17, 32, 1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 16px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.2s ease,
     background 0.3s ease,
     opacity 0.3s ease;
-  padding: 20px;
-  height: 70px;
-  width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   transform-origin: top;
 }
 
 .navbar.shrink {
-  height: 30px;
+  padding: 8px 0;
 }
 
 .navbar.shrink .logo img {
-  transform: scale(0.2);
-  top: -100px;
-  left: -50px;
+  height: 42px;
 }
 
 .navbar.shrink .main-menu ul {
-  transform: scale(0.85);
-  top: -15px;
-  left: -50px;
+  gap: 24px;
 }
+
+.navbar.shrink .main-menu a {
+  font-size: 15px;
+  padding: 2px 0;
+}
+
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap; /* 🔥 important for mobile */
-  /* align-items: center; */
 }
 
 .hamburger {
@@ -71,11 +71,14 @@ img {
 }
 
 .logo img {
-  transform: scale(0.3);
-  position: relative;
-  top: -85px;
-  left: -50px;
+  height: 70px;
+  width: auto;
+  display: block;
+  /*position: relative;*/
   filter: drop-shadow(0 5px 10px rgb(255, 255, 255));
+  transition:
+    height 0.3s ease,
+    transform 0.3s ease;
 }
 
 .main-menu {
@@ -84,10 +87,13 @@ img {
 
 .main-menu ul {
   display: flex;
-  gap: 80px;
-  position: relative;
-  top: 10px;
-  right: 50px;
+  gap: 40px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transition:
+    gap 0.3s ease,
+    transform 0.3s ease;
 }
 
 .main-menu a {
@@ -115,18 +121,16 @@ img {
 /* Utility Classes */
 #everything-holder {
   min-height: 100vh;
-  max-width: 800px;
+  max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   padding: 10px 15px;
-  background-color: #8a78ff00;
+  background-color: transparent;
 }
-/* .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
+
 #main-content {
   font-family: "Montserrat";
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 15px;
@@ -134,18 +138,38 @@ img {
   background-color: rgb(255, 237, 212);
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
 }
 
 /* Responsive Design */
 @media (max-width: 500px) {
   .navbar .container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: 450px;
   }
 
+  .main-menu ul {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
   .navbar {
-    height: 130px;
+    padding: 12px 0;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+    margin-right: 15px;
   }
 
   .main-menu {
@@ -158,26 +182,23 @@ img {
   }
 
   .main-menu ul {
+    display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 5px;
-    margin-top: 5px;
-    position: absolute;
+    gap: 12px;
+    margin: 0;
+    padding: 10px 0;
+    position: static;
   }
 
   .main-menu li {
     text-align: center;
-    padding: 15px 0;
-    border-top: 1px solid #ddd;
-  }
-
-  .hamburger {
-    display: block;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .logo img {
-    transform: scale(0.4);
-    top: -60px;
-    left: -150px;
+    height: 45px;
+    margin: 0 auto;
   }
 }
