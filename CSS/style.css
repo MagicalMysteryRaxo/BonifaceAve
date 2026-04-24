@@ -8,7 +8,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: #ffcb62;
+  background: linear-gradient(185deg, #ffd788, #ffcb62);
 }
 
 a {
@@ -26,17 +26,17 @@ img {
 
 /* Navbar */
 .navbar {
-  background: rgba(17, 17, 32, 1);
-  position: sticky;
+  background: rgb(29, 19, 16);
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
   padding: 16px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition:
-    transform 0.2s ease,
+    padding 0.3s ease,
     background 0.3s ease,
-    opacity 0.3s ease;
+    box-shadow 0.3s ease;
   transform-origin: top;
 }
 
@@ -59,8 +59,10 @@ img {
 
 .navbar .container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* 🔥 important for mobile */
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: nowrap;
 }
 
 .hamburger {
@@ -71,10 +73,10 @@ img {
 }
 
 .logo img {
-  height: 70px;
+  height: 50px;
   width: auto;
   display: block;
-  /*position: relative;*/
+  margin-left: 50px;
   filter: drop-shadow(0 5px 10px rgb(255, 255, 255));
   transition:
     height 0.3s ease,
@@ -89,7 +91,7 @@ img {
   display: flex;
   gap: 40px;
   align-items: center;
-  margin: 0;
+  margin-right: 80px;
   padding: 0;
   transition:
     gap 0.3s ease,
@@ -132,8 +134,8 @@ img {
   font-family: "Montserrat";
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin: 90px auto;
+  padding: 30px 30px;
   height: 1000px;
   background-color: rgb(255, 237, 212);
   border-radius: 16px;
@@ -141,8 +143,32 @@ img {
   min-height: 400px;
 }
 
+.main-content h1 {
+  margin-top: 200px;
+}
+
+/*About Me Page*/
+.about-content {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start; /* or center if you want vertical centering */
+  gap: 50px;
+}
+
+.about-content img {
+  width: 300px; /* adjust as needed */
+  height: auto;
+  max-width: 100%;
+  margin-left: 20px;
+}
+
+.about-content p {
+  flex: 1; /* makes text take remaining space */
+  margin-right: 20px;
+}
+
 /* Responsive Design */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .navbar .container {
     flex-direction: row;
     justify-content: space-between;
@@ -155,7 +181,7 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .navbar {
     padding: 12px 0;
   }
