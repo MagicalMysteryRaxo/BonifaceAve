@@ -19,7 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
     <link
       rel="shortcut icon"
       href="images/Favicon-and-logo/favicon.ico"
@@ -27,15 +27,36 @@
     />
   </head>
   <body>
-    <div id="navbar-placeholder"></div>
+    <!-- Navbar will be loaded here by main.js -->
+    <div id="navbar-holder"></div>
+    <!-- Main Content -->
     <div class="container" id="everything-holderHOME">
-      <div class="container" id="main-contentHOME">
-        <div class="container" id="overIMG"></div>
-        <img src="images/front.png" alt="drawing" />
+      <div class="hero-slider">
+        <img src="images/front.png" class="slide active" />
+        <img src="images/hollin.png" class="slide" />
+        <img src="images/purplehand.gif" class="slide" />
+        <img src="images/hotsprings.png" class="slide" />
+        <img src="images/Green.png" class="slide" />
         <div class="container" id="HomeTitleCont">
           <h1 class="Main-Title" style="text-align: center">
             BONIFACE <br />AVENUE
           </h1>
+        </div>
+        <div class="side-card left">
+          <img
+            src="images/rotbanner.png"
+            href="the-rot.html"
+            class="side-card-image"
+          />
+          <div class="side-card-handle left"></div>
+          <div class="side-title left">ROT DIARY</div>
+          <i class="fa-solid fa-angles-right arrow"></i>
+        </div>
+        <div class="side-card right">
+          <img src="images/hsbanner.png" class="side-card-image" />
+          <div class="side-card-handle right"></div>
+          <div class="side-title right">HATE ME! SKATE ME!</div>
+          <i class="fa-solid fa-angles-left arrow"></i>
         </div>
       </div>
       <script src="js/main.js"></script>

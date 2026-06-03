@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Gothic+Expanded+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Bitter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+/*Rot Diary Page*/
+body.rot {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(185deg, #797b25, #18371e);
+}
+
+.comic-screen {
+  display: none;
+}
+
+.comic-screen.active {
+  display: block;
+}
+
+#main-contentROT {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  width: 100%;
+  max-width: 1100px;
+  margin: 90px auto;
+  padding: 30px 30px;
+  min-height: 400px;
+  background-color: rgb(255, 237, 212);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.rotHeader {
+  color: #797b25;
+  font-size: 48px;
+  font-family: Bitter, serif;
+}
+
+.comic-img {
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 5px 15px rgba(14, 24, 5, 0.5);
+}
+
+.two-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.comic-text {
+  font-size: 18px;
+  color: #52544f;
+  margin: 50px 100px 50px 100px;
+  line-height: 1.6;
+}
+
+#mmbtn {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  padding: 10px 50px;
+  background-color: #797b2595;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btm-optns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
+
+.next-text {
+  color: #52544f;
+  position: relative;
+  margin: 0px 100px auto;
+  justify-self: end;
+  cursor: pointer;
+}
+
+.next-text:hover {
+  color: #797b25;
+}
+
+.prev-text {
+  color: #52544f;
+  position: relative;
+  margin: 0px 0 auto 80px;
+  justify-self: start;
+  cursor: pointer;
+}
+
+.prev-text:hover {
+  color: #797b25;
+}
+
+.next-text:hover {
+  color: #797b25;
+}
+
+.index-list {
+  background-color: #d9d6d1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding: 20px 20px;
+  margin: 20px 70px 20px 70px;
+}
+
+.index-list ul {
+  display: list-item;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.index-list a:hover {
+  color: #797b25;
+}
+
+.visited-page {
+  color: #666756;
+  opacity: 0.7;
+}
+
+.current-page {
+  color: #797b25;
+  font-weight: bold;
+}
+
+.index-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+.index-text {
+  justify-content: space-between;
+  font-size: 18px;
+  color: #52544f;
+  margin: 10px 10px 10px 100px;
+  line-height: 1.6;
+}
+
+#clearProgress {
+  justify-content: center;
+  margin: 20px 80px 20px auto;
+  padding: 10px 20px;
+  background-color: #797b251c;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

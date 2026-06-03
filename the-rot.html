@@ -20,7 +20,8 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/rot.css" />
     <link
       rel="shortcut icon"
       href="images/Favicon-and-logo/favicon.ico"
@@ -28,175 +29,214 @@
     />
   </head>
   <body class="rot">
-    <div id="navbar-placeholder"></div>
+    <div id="navbar-holder"></div>
     <div class="container" id="everything-holder">
       <div class="container" id="main-contentROT">
-        <div class="comic-screen active" id="comic-landing">
-          <h1 class="rotHeader" style="text-align: center">DEAR DIARY</h1>
-          <img
-            class="comic-img"
-            src="images/Rot/CAP_01/ER_ACT_01_CAP_01_01.png"
-            width="600"
-            height="auto"
-            alt="Rot diary page 1"
-          />
-          <div class="comic-text">
-            <p>
-              Dear diary... I hope i'm doing this right. This is how people used
-              to hide their secrets, no? In a book that anyone could just
-              stumble upon and open. Yeah.. weird traditions humans used have i
-              guess. <br />Anyways, if you're reading this i guess that's
-              exactly what happened. You picked up this book from whatever chest
-              i hid it in. Which is saying something due to my special ability
-              to hide things in unexpected places. So i guess you're like an
-              actual profesional searcher or historian or something.<br />
-              And that is actually good news!
-            </p>
+        <div class="comic-screen" id="index">
+          <h1 class="rotHeader" style="text-align: center">INDEX</h1>
+          <div class="index-options">
+            <p class="index-text">Choose a page to read:</p>
+            <p class="index-text">or</p>
+            <button class="index-text" id="clearProgress">
+              Reset Reading Progress
+            </button>
           </div>
-          <div class="btm-optns">
-            <br />
-            <br />
-            <p class="next-text nextBtn">Who is this?? >>></p>
-          </div>
-        </div>
-        <div class="comic-screen" id="who is this?">
-          <h1 class="rotHeader" style="text-align: center">Who is this?</h1>
-          <img
-            src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_02-1.gif"
-            class="comic-img"
-            width="600"
-            height="auto"
-            alt="Ernie's boot on rot"
-          />
-          <p class="comic-text">
-            Means i'm dead :p <br />Personally, i have nothing to hide. I just
-            find it kinda cool that someone will read about me when im dead.
-            <br />
-            So thanks for finding this! In the rare case i'm not dead... STOP
-            READING RIGHT NOW! <br />
-            Respect this private diary!
-          </p>
-          <img
-            src="images/Rot/CAP_01/ER_ACT_01_CAP_01_02-2.png"
-            class="comic-img"
-            width="600"
-            height="auto"
-            alt="Ernie walks"
-          />
-          <p class="comic-text">
-            Who am i? My name is Ernie. I lived here in Woogort. It was already
-            rotting when i was born but the elders speak of a time where
-            supposedly everything was alive and growing...
-          </p>
-          <img
-            src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_02.gif"
-            class="comic-img"
-            width="600"
-            height="auto"
-            alt="Ernie looks at camera"
-          />
-          <p class="comic-text">
-            I don't know if i believe that. The elders can be quite...
-            imaginative. <br />
-            Anyways, this is about me, not about the crazy old ones.
-          </p>
-          <div class="btm-optns">
-            <p class="prev-text prevBtn"><<< Dear diary</p>
-            <p class="next-text nextBtn">Rotting? >>></p>
+
+          <div class="index-list">
+            <ul>
+              <li>
+                <a href="#" class="index-link" data-screen="1">>>DEAR DIARY</a>
+              </li>
+              <li>
+                <a href="#" class="index-link" data-screen="2"
+                  >>>Who is this?</a
+                >
+              </li>
+              <li>
+                <a href="#" class="index-link" data-screen="3">>>Rotting?</a>
+              </li>
+              <li>
+                <a href="#" class="index-link" data-screen="4"
+                  >>>Wait, that's too much to unpack...</a
+                >
+              </li>
+              <li>
+                <a href="#" class="index-link" data-screen="5"
+                  >>>Look for a battery</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="comic-screen" id="rotting?">
-          <h1 class="rotHeader" style="text-align: center">Rotting?</h1>
-          <img
-            src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_05.png"
-            class="comic-img"
-            width="600"
-            height="auto"
-            alt="Ernie at plane"
-          />
-          <p class="comic-text">
-            Pretty much everyone i care about is dead or ill. It is too easy to
-            catch The Rot and die so... that may be what happened to me!
-            <br />So future historians, here's your answer: Ernie died of The
-            Rot. Like everyone else. <br />But i'm not dead yet. Not at the time
-            im writing this (obviously...) So while i haven't died, I like to
-            walk around and find valuable objects.
-          </p>
-          <div class="two-imgs">
+        <div class="comic-pages">
+          <div class="comic-screen active" id="comic-landing">
+            <h1 class="rotHeader" style="text-align: center">DEAR DIARY</h1>
             <img
-              src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_07.png"
-              alt="Roting footsteps"
-              class="comic-img twogrid"
-              width="300"
+              class="comic-img"
+              src="images/Rot/CAP_01/ER_ACT_01_CAP_01_01.png"
+              width="600"
+              height="auto"
+              alt="Rot diary page 1"
+            />
+            <div class="comic-text">
+              <p>
+                Dear diary... I hope i'm doing this right. This is how people
+                used to hide their secrets, no? In a book that anyone could just
+                stumble upon and open. Yeah.. weird traditions humans used have
+                i guess. <br />Anyways, if you're reading this i guess that's
+                exactly what happened. You picked up this book from whatever
+                chest i hid it in. Which is saying something due to my special
+                ability to hide things in unexpected places. So i guess you're
+                like an actual profesional searcher or historian or
+                something.<br />
+                And that is actually good news!
+              </p>
+            </div>
+            <div class="btm-optns">
+              <br />
+              <br />
+              <p class="next-text nextBtn">Who is this?? >>></p>
+            </div>
+          </div>
+          <div class="comic-screen" id="who is this?">
+            <h1 class="rotHeader" style="text-align: center">Who is this?</h1>
+            <img
+              src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_02-1.gif"
+              class="comic-img"
+              width="600"
+              height="auto"
+              alt="Ernie's boot on rot"
+            />
+            <p class="comic-text">
+              Means i'm dead :p <br />Personally, i have nothing to hide. I just
+              find it kinda cool that someone will read about me when im dead.
+              <br />
+              So thanks for finding this! In the rare case i'm not dead... STOP
+              READING RIGHT NOW! <br />
+              Respect this private diary!
+            </p>
+            <img
+              src="images/Rot/CAP_01/ER_ACT_01_CAP_01_02-2.png"
+              class="comic-img"
+              width="600"
+              height="auto"
+              alt="Ernie walks"
+            />
+            <p class="comic-text">
+              Who am i? My name is Ernie. I lived here in Woogort. It was
+              already rotting when i was born but the elders speak of a time
+              where supposedly everything was alive and growing...
+            </p>
+            <img
+              src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_02.gif"
+              class="comic-img"
+              width="600"
+              height="auto"
+              alt="Ernie looks at camera"
+            />
+            <p class="comic-text">
+              I don't know if i believe that. The elders can be quite...
+              imaginative. <br />
+              Anyways, this is about me, not about the crazy old ones.
+            </p>
+            <div class="btm-optns">
+              <p class="prev-text prevBtn"><<< Dear diary</p>
+              <p class="next-text nextBtn">Rotting? >>></p>
+            </div>
+          </div>
+          <div class="comic-screen" id="rotting?">
+            <h1 class="rotHeader" style="text-align: center">Rotting?</h1>
+            <img
+              src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_05.png"
+              class="comic-img"
+              width="600"
+              height="auto"
+              alt="Ernie at plane"
+            />
+            <p class="comic-text">
+              Pretty much everyone i care about is dead or ill. It is too easy
+              to catch The Rot and die so... that may be what happened to me!
+              <br />So future historians, here's your answer: Ernie died of The
+              Rot. Like everyone else. <br />But i'm not dead yet. Not at the
+              time im writing this (obviously...) So while i haven't died, I
+              like to walk around and find valuable objects.
+            </p>
+            <div class="two-imgs">
+              <img
+                src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_07.png"
+                alt="Roting footsteps"
+                class="comic-img twogrid"
+                width="300"
+                height="auto"
+              />
+              <img
+                src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_08_0000.gif"
+                alt="Roting footsteps"
+                class="comic-img twogrid"
+                width="300"
+                height="auto"
+              />
+            </div>
+            <p class="comic-text">
+              But it has to be glass or metal. Any other material is susceptible
+              to The Rot. Really makes you think why did old people make
+              everything out of plastic...
+            </p>
+            <img
+              src="images/Rot/CAP_01/ER_ACT_01_CAP_01_09.png"
+              alt="Roting plastic"
+              class="comic-img"
+              width="600"
               height="auto"
             />
+            <p class="comic-text">
+              Today i'm gonna tell you the story of how i almost died. Because i
+              need to justify using my wish... The elder told me to save them
+              for special occasions and once scolded me for using it to get more
+              Reflo... yeah that maybe wasn't an extenuating circumstance... but
+              what can i say, you would have done it too!
+            </p>
+
+            <div class="btm-optns">
+              <p class="prev-text prevBtn"><<< Who is this?</p>
+              <p class="next-text nextBtn">
+                Wait, that's too much to unpack... >>>
+              </p>
+            </div>
+          </div>
+          <div class="comic-screen" id="wait, that's too much to unpack...">
+            <h1 class="rotHeader" style="text-align: center">
+              Wait, that's too much to unpack...
+            </h1>
+
             <img
-              src="images/Rot/CAP_01/[AN]ER_ACT_01_CAP_01_08_0000.gif"
-              alt="Roting footsteps"
-              class="comic-img twogrid"
-              width="300"
+              src="images/Rot/CAP_01/ER_ACT_01_CAP_01_10.png"
+              alt="Ernie's hand holds a chain"
+              class="comic-img"
+              width="600"
               height="auto"
             />
-          </div>
-          <p class="comic-text">
-            But it has to be glass or metal. Any other material is susceptible
-            to The Rot. Really makes you think why did old people make
-            everything out of plastic...
-          </p>
-          <img
-            src="images/Rot/CAP_01/ER_ACT_01_CAP_01_09.png"
-            alt="Roting plastic"
-            class="comic-img"
-            width="600"
-            height="auto"
-          />
-          <p class="comic-text">
-            Today i'm gonna tell you the story of how i almost died. Because i
-            need to justify using my wish... The elder told me to save them for
-            special occasions and once scolded me for using it to get more
-            Reflo... yeah that maybe wasn't an extenuating circumstance... but
-            what can i say, you would have done it too!
-          </p>
-
-          <div class="btm-optns">
-            <p class="prev-text prevBtn"><<< Who is this?</p>
-            <p class="next-text nextBtn">
-              Wait, that's too much to unpack... >>>
+            <p class="comic-text">
+              Anyways... the day i almost died. I was just out and about,
+              minding my own business. I remember i found a cool clock, but it
+              was broken. Lucky for me i love repairing stuff. So i just looked
+              around for any spare parts, maybe an old tech battery...
             </p>
+            <img
+              src="images/Rot/CAP_01/ER_ACT_01_CAP_01_11.png"
+              alt="Ernie listens to the clock"
+              class="comic-img"
+              width="600"
+              height="auto"
+              style="margin-bottom: 80px"
+            />
+            <div class="btm-optns">
+              <p class="prev-text prevBtn"><<< Rotting?</p>
+              <p class="next-text nextBtn">Look for a battery >>></p>
+            </div>
           </div>
+          <button id="mmbtn">Index</button>
         </div>
-        <div class="comic-screen" id="wait, that's too much to unpack...">
-          <h1 class="rotHeader" style="text-align: center">
-            Wait, that's too much to unpack...
-          </h1>
-
-          <img
-            src="images/Rot/CAP_01/ER_ACT_01_CAP_01_10.png"
-            alt="Ernie's hand holds a chain"
-            class="comic-img"
-            width="600"
-            height="auto"
-          />
-          <p class="comic-text">
-            Anyways... the day i almost died. I was just out and about, minding
-            my own business. I remember i found a cool clock, but it was broken.
-            Lucky for me i love repairing stuff. So i just looked around for any
-            spare parts, maybe an old tech battery...
-          </p>
-          <img
-            src="images/Rot/CAP_01/ER_ACT_01_CAP_01_11.png"
-            alt="Ernie listens to the clock"
-            class="comic-img"
-            width="600"
-            height="auto"
-            style="margin-bottom: 80px"
-          />
-          <div class="btm-optns">
-            <p class="prev-text prevBtn"><<< Rotting?</p>
-            <p class="next-text nextBtn">Look for a battery >>></p>
-          </div>
-        </div>
-        <button id="mmbtn">Index</button>
       </div>
     </div>
     <script src="js/main.js"></script>

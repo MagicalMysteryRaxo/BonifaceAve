@@ -1,7 +1,7 @@
 fetch("navbar.html")
   .then((response) => response.text())
   .then((html) => {
-    document.querySelector("#navbar-placeholder").innerHTML = html;
+    document.querySelector("#navbar-holder").innerHTML = html;
 
     const hamburger = document.querySelector(".hamburger");
     const menu = document.querySelector(".main-menu");
@@ -26,3 +26,71 @@ fetch("navbar.html")
       }
     });
   });
+
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function changeSlide() {
+  if (slides.length === 0) {
+    return;
+  }
+
+  slides[currentSlide].classList.remove("active");
+
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  slides[currentSlide].classList.add("active");
+}
+
+if (slides.length > 0) {
+  setInterval(changeSlide, 4000);
+}
+
+function getVisitorId() {
+  let visitorId = localStorage.getItem("visitorId");
+
+  if (!visitorId) {
+    visitorId = crypto.randomUUID();
+    localStorage.setItem("visitorId", visitorId);
+  }
+
+  return visitorId;
+}
+
+function trackEvent(
+  eventType,
+  comicName = "",
+  durationSeconds = 0,
+  extraData = {},
+) {
+  fetch("api/track-event.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      visitorId: getVisitorId(),
+      eventType: eventType,
+      comicName: comicName,
+      pageName: window.location.pathname,
+      durationSeconds: durationSeconds,
+      extraData: extraData,
+    }),
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  trackEvent("page_view");
+
+  document.querySelectorAll('a[href="the-rot.html"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      trackEvent("comic_click", "Rot Diary");
+    });
+  });
+
+  document.querySelectorAll('a[href="hate-me.html"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      trackEvent("comic_click", "Hate Me! Skate Me!");
+    });
+  });
+});
