@@ -421,6 +421,9 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 700px) {
+  .body {
+    width: 100vw;
+  }
   .navbar .container {
     flex-direction: row;
     justify-content: space-between;
@@ -431,9 +434,7 @@ h1 {
     gap: 24px;
     flex-wrap: wrap;
   }
-}
 
-@media (max-width: 700px) {
   .navbar {
     padding: 12px 0;
   }

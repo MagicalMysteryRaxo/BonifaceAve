@@ -7,7 +7,7 @@
   font-family: "Montserrat";
   width: 100%;
   max-width: 1100px;
-  margin: 90px auto;
+  margin: 100px auto 40px auto;
   padding: 30px 30px;
   min-height: 400px;
   background-color: rgb(255, 237, 212);
@@ -23,6 +23,10 @@
   margin-left: 140px;
 }
 
+.quest-description {
+  font-size: 16px;
+}
+
 .gen-btn {
   align-self: center;
   padding: 12px 20px;
@@ -36,6 +40,12 @@
   margin-bottom: 100px;
 }
 
+.gen-btn.results {
+  align-self: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
 #questResult {
   margin: 20px auto;
   padding: 20px;
@@ -47,13 +57,18 @@
 
 @media (max-width: 700px) {
   .gen-screen {
-    margin: 80px 10px;
+    max-width: 97%;
+    margin: 80px 10px auto 10px;
     padding: 20px;
   }
 
   .gen-subtitle {
     margin-left: 0;
     text-align: center;
+  }
+
+  .quest-description {
+    font-size: 16px;
   }
 
   #questResult {
