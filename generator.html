@@ -30,6 +30,17 @@
   </head>
   <body>
     <div id="navbar-holder"></div>
+    <div class="gen-screen active" id="all-gens">
+      <h1>Generators</h1>
+      <p class="gen-subtitle">choose a generator</p>
+      <div class="quest-card" id="gens-list">
+      <ul class="gen-list">
+        <li class="gen-item" data-gen="sims-quest">Sims 2 Quest Generator</li>
+        <li class="gen-item" data-gen="random-event">Random Event Generator</li>
+      </ul>
+      </div>
+    </div>
+    <!-- Sims 2 Quest Generator -->
     <div class="gen-screen" id="sims-quest">
       <h1>Sims 2 Quest Generator</h1>
       <p class="gen-subtitle">Test your luck</p>
@@ -37,8 +48,17 @@
       <div id="questResult" class="quest-card">
         <p>Click the button to receive your quest.</p>
       </div>
-      <button class="gen-btn" id="rollQuestBtn">Generate Quest</button>
+      <button class="gen-btn" id="rollQuestBtn">Receive Quest</button>
     </div>
+    <!-- Random event generator -->
+    <div class="gen-screen" id="random-event">
+      <h1>Random Event Generator</h1>
+      <p class="gen-subtitle">Roll this every day for an extra spice in your game. There are 100 different rolls.</p>
+      <!-- aqui va el contenido generado -->
+      <div id="eventResult" class="event-card">
+        <p>Click the button to receive a random event.</p>
+      </div>
+      <button class="gen-btn" id="rollEventBtn">Generate Event</button>
     <script src="js/main.js"></script>
     <script src="js/gens.js"></script>
   </body>
