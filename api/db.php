@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "root";
-$password = "99!T6ad99#";
-$database = "boniface_analytics";
+$user = "u873212447_usr_92itbV08";
+$password = "|5WKdKAgM";
+$database = "u873212447_db_92itbV08";
 
 $conn = new mysqli($host, $user, $password, $database);
 
